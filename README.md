@@ -20,3 +20,18 @@ This library provides an interface for the communication with serial devices and
 |---------|-------------------------|---------------|
 | Windows | Windows 10 (x64)        | in progress   |
 | Linux   | Ubuntu Server 22.04 LTS | in progress   |
+
+## Documentation
+Check out the [Wiki](https://github.com/Serial-Link/Serial-Link/wiki) section on how to use this library.
+
+## Credits
+- Big thanks goes out to [@Katze719](https://github.com/Katze719) who wrote most of the C++ files and functions!
+- Thanks to [@AapoAlas](https://github.com/aapoalas) for the great support and help on the [Deno Discord](https://discord.gg/deno)!
+- Thanks to [@Dj](https://github.com/DjDeveloperr) for the inspiration on how to write such a library!
+
+## Licence
+Apache-2.0. Check [LICENSE](https://github.com/Serial-Link/Serial-Link/blob/main/LICENSE) for more details.
+
+Feel free to contribute to this project.
+
+Copyright 2023 © Max
