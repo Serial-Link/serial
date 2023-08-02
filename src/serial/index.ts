@@ -123,4 +123,3 @@ export default class Serial {
     }
 }
 
-Deno.stdin.read()
