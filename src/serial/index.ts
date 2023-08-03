@@ -157,7 +157,14 @@ export default class Serial {
         return {
             name: '',
             prefix: '',
-            index: 0
+            index: 0,
+            path: '',
+            manufacturer: undefined,
+            serialNumber: undefined,
+            pnpId: undefined,
+            locationId: undefined,
+            productId: undefined,
+            vendorId: undefined
         };
     }
 
