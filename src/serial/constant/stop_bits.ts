@@ -1,5 +1,5 @@
 /**
- * Available data bits.
+ * Available stop bits.
  * 
  * @constant
  */

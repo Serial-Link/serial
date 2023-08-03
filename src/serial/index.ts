@@ -1,9 +1,11 @@
-import { Baudrate } from "./type/baudrate.d.ts";
-import { Parity } from "./type/parity.d.ts";
-import { Port } from "./interface/port.d.ts";
-import { ReadOptions } from "./interface/read_options.d.ts";
-import { WriteOptions } from "./interface/write_options.d.ts";
-import { DataBits } from "./type/data_bits.d.ts";
+import { Device } from './interface/device.d.ts';
+import { Port } from './interface/port.d.ts';
+import { ReadOptions } from './interface/read_options.d.ts';
+import { WriteOptions } from './interface/write_options.d.ts';
+import { Baudrate } from './type/baudrate.d.ts';
+import { DataBits } from './type/data_bits.d.ts';
+import { Parity } from './type/parity.d.ts';
+import { StopBits } from './type/stop_bits.d.ts';
 
 /**
  * The Serial class with all its functionality.
@@ -15,12 +17,10 @@ export default class Serial {
      * Create a new instance of a serial connection to a serial device.
      * 
      * @constructor
-     * @param portName The name of the port to connect to
-     * @param baudrate The baudrate to use
+     * @param port Port object
      */
     constructor(
-        portName : string,
-        baudrate : Baudrate
+        port : Port
     ) {
 
     }
@@ -32,7 +32,7 @@ export default class Serial {
      * @static
      * @returns Resolves to a list of port objects, rejects if any error encountered
      */
-    public static listPorts() : Promise<Port[]> {
+    public static listPorts() : Promise<Device[]> {
         return new Promise(() => {});
     }
 
@@ -174,7 +174,7 @@ export default class Serial {
      * @type port
      * @returns Resolves to the port object of the serial object, rejects if any error encountered
      */
-    public get port() : Promise<Port> {
+    public get port() : Promise<Device> {
         return new Promise(() => {});
     }
 
@@ -218,7 +218,7 @@ export default class Serial {
      * @type stopBits
      * @returns The stop bits of the serial object
      */
-    public get stopBits() : number {
-        return 0;
+    public get stopBits() : StopBits {
+        return "ONE";
     }
 }

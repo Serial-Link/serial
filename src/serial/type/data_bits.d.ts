@@ -1,5 +1,5 @@
-import { dataBits } from "../constant/data_bits.ts";
-import { TypeFromObject } from "./conversion/type_from_object.d.ts";
+import { TypeFromObject } from './conversion/type_from_object.d.ts';
+import { dataBits } from '../constant/data_bits.ts';
 
 /**
  * Type from data bits.

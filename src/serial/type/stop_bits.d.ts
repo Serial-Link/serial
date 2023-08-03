@@ -1,5 +1,5 @@
-import { stopBits } from "../constant/stop_bits.ts";
-import { TypeFromObject } from "./conversion/type_from_object.d.ts";
+import { TypeFromObject } from './conversion/type_from_object.d.ts';
+import { stopBits } from '../constant/stop_bits.ts';
 
 /**
  * Type from stop bits.

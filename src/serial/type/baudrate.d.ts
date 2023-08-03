@@ -1,5 +1,5 @@
-import { baudrates } from "../constant/baudrates.ts";
-import { TypeFromArray } from "./conversion/type_from_array.d.ts";
+import { TypeFromArray } from './conversion/type_from_array.d.ts';
+import { baudrates } from '../constant/baudrates.ts';
 
 /**
  * Type from default baudrates.
