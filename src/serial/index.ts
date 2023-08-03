@@ -1,40 +1,57 @@
+import { Baudrate } from "./constant/baudrates.ts";
 import { Port } from "./interface/port.d.ts";
 import { ReadOptions } from "./interface/read_options.d.ts";
 import { WriteOptions } from "./interface/write_options.d.ts";
 
+/**
+ * The Serial class with all its functionality.
+ * 
+ * @class
+ */
 export default class Serial {
-    constructor() {
+    /**
+     * Create a new instance of a serial connection to a serial device.
+     * 
+     * @constructor
+     * @param portName The name of the port to connect to
+     * @param baudrate The baudrate to use
+     */
+    constructor(
+        portName : string,
+        baudrate : Baudrate
+    ) {
 
     }
 
     /**
-     * Returns a list of port info objects.
+     * Returns a list of port objects. It resolves to a list of port objects and rejects if any error encountered.
      * 
      * @public
      * @static
+     * @returns Resolves to a list of port objects, rejects if any error encountered
      */
-    public static getPortsInfo() {
-
+    public static listPorts() : Promise<Port[]> {
+        return new Promise(() => {});
     }
 
     /**
-     * Opens the connection to the serial device. The connection must be closed.
-     * Throws a `ConnectionAlreadyOpenedError` if the connection is already opened.
+     * Opens the connection to the serial device. It resolves if the connection was opened successfully
+     * and rejects if any error encountered or the connection is already opened.
      * 
      * @public
      */
-    public open() : void {
-
+    public open() : Promise<void> {
+        return new Promise(() => {});
     }
 
     /**
-     * Closes the connection to the serial device. The connection must be opened.
-     * Throws a `ConnectionAlreadyClosedError` if the connection is already closed.
+     * Closes the connection to the serial device. It resolves if the connection was closed successfully
+     * and rejects if any error encountered or the connection is already closed.
      * 
      * @public
      */
-    public close() : void {
-
+    public close() : Promise<void> {
+        return new Promise(() => {});
     }
 
     /**
@@ -45,44 +62,44 @@ export default class Serial {
      * @public
      * @param buffer Buffer to read bytes into
      * @param options Read options
-     * @returns Resolves/Rejects to the number of bytes read
+     * @returns Resolves to the number of bytes read, rejects if any error encountered or the timeout is expired
      */
     public read(
         buffer : Uint8Array,
         options : ReadOptions
     ) : Promise<number> {
-        return new Promise(() => 0);
+        return new Promise(() => {});
     }
 
     /**
      * Reads up to `buffer.byteLength` bytes into `buffer` from the serial input buffer
      * until a specific search pattern is found.
-     * It resolves to the number of bytes read (`0` < `n` <= `buffer.byteLength`) and
-     * rejects if any error encountered or the timeout is expired.
+     * It resolves to the number of bytes read (`0` < `n` <= `buffer.byteLength`)
+     * and rejects if any error encountered or the timeout is expired.
      * 
      * @public
      * @param buffer Buffer to read bytes into
      * @param pattern Search pattern
      * @param options Read options
-     * @returns Resolves/Rejects to the number of bytes read
+     * @returns Resolves to the number of bytes read, rejects if any error encountered or the timeout is expired
      */
     public readUntil(
         buffer : Uint8Array,
         pattern : string,
         options : ReadOptions
     ) : Promise<number> {
-        return new Promise(() => 0);
+        return new Promise(() => {});
     }
 
     /**
      * Writes up to `buffer.byteLength` bytes from `buffer` into the serial output buffer.
-     * It resolves to the number of bytes written (`0` < `n` <= `buffer.byteLength`) and
-     * rejects if any error encountered or the timeout is expired.
+     * It resolves to the number of bytes written (`0` < `n` <= `buffer.byteLength`)
+     * and rejects if any error encountered or the timeout is expired.
      * 
      * @public
      * @param buffer Buffer to write bytes from
      * @param options Write options
-     * @returns Resolves/Rejects to the number of bytes written
+     * @returns Resolves to the number of bytes written, rejects if any error encountered or the timeout is expired
      */
     public write(
         buffer : Uint8Array,
@@ -92,80 +109,71 @@ export default class Serial {
     }
 
     /**
-     * Clears the local input buffer.
-     * It resolves as soon as the input buffer is successfully cleared and rejects if any error encountered.
+     * Clears the local input buffer. It resolves as soon as the input buffer is successfully cleared
+     * and rejects if any error encountered.
      * 
      * @public
-     * @returns Resolves after successful clear/Rejects if any error encountered
      */
     public clearBufferIn() : Promise<void> {
         return new Promise(() => {});
     }
 
     /**
-     * Clears the local output buffer.
-     * It resolves as soon as the output buffer is successfully cleared and rejects if any error encountered.
+     * Clears the local output buffer. It resolves as soon as the output buffer is successfully cleared
+     * and rejects if any error encountered.
      * 
      * @public
-     * @returns Resolves after successful clear, rejects if any error encountered
      */
     public clearBufferOut() : Promise<void> {
         return new Promise(() => {});
     }
 
     /**
-     * Getter for getting the current open state.
+     * Getter for getting the current open state. It resolves to the current state of the serial connection
+     * and rejects if any error encountered.
      * 
      * @public
      * @type isOpen
-     * @returns `true` if the port is open, `false` otherwise
+     * @returns Resolves to the current state (opened: `true`, closed: `false`), rejects if any error encountered
      */
-    public get isOpen() : boolean {
-        return false;
+    public get isOpen() : Promise<boolean> {
+        return new Promise(() => {});
     }
 
     /**
-     * Getter for getting the current size of the local input buffer.
+     * Getter for getting the current size of the local input buffer. It resolves to the current size of
+     * the local input buffer and rejects if any error encountered.
      * 
      * @public
      * @type sizeBufferIn
-     * @returns The current size of the local input buffer
+     * @returns Resolves to the current size of the local input buffer, rejects if any error encountered
      */
-    public get sizeBufferIn() : number {
-        return 0;
+    public get sizeBufferIn() : Promise<number> {
+        return new Promise(() => {});
     }
     
     /**
-     * Getter for getting the current size of the local output buffer.
+     * Getter for getting the current size of the local output buffer. It resolves to the current size of
+     * the local output buffer and rejects if any error encountered.
      * 
      * @public
      * @type sizeBufferOut
-     * @returns The current size of the local output buffer
+     * @returns Resolves to the current size of the local output buffer, rejects if any error encountered
      */
-    public get sizeBufferOut() : number {
-        return 0;
+    public get sizeBufferOut() : Promise<number> {
+        return new Promise(() => {});
     }
 
     /**
-     * Getter for getting the port object of the serial object.
+     * Getter for getting the port object of the serial object. It resolves to the port object of the serial object
+     * and rejects if any error encountered.
      * 
      * @public
      * @type port
-     * @returns The port object of the serial object
+     * @returns Resolves to the port object of the serial object, rejects if any error encountered
      */
-    public get port() : Port {
-        return {
-            name: '',
-            prefix: '',
-            index: 0,
-            path: '',
-            manufacturer: undefined,
-            serialNumber: undefined,
-            pnpId: undefined,
-            locationId: undefined,
-            productId: undefined,
-            vendorId: undefined
-        };
+    public get port() : Promise<Port> {
+        return new Promise(() => {});
     }
 
     /**
@@ -175,8 +183,8 @@ export default class Serial {
      * @type baudrate
      * @returns The baudrate of the serial object
      */
-    public get baudrate() : number {
-        return 0;
+    public get baudrate() : Baudrate {
+        return 9600;
     }
     
     /**
