@@ -1,7 +1,7 @@
-import { Device } from './interface/device.d.ts'
-import { Port } from './interface/port.d.ts'
-import { ReadOptions } from './interface/read_options.d.ts'
-import { WriteOptions } from './interface/write_options.d.ts'
+import { Device } from './interface/device.d.ts';
+import { Port } from './interface/port.d.ts';
+import { ReadOptions } from './interface/read_options.d.ts';
+import { WriteOptions } from './interface/write_options.d.ts';
 
 /**
  * The Serial class with all its functionality.
@@ -64,7 +64,7 @@ export default class Serial {
      */
     public read(
         buffer : Uint8Array,
-        options : ReadOptions
+        options? : ReadOptions
     ) : Promise<number> {
         return new Promise(() => {});
     }
@@ -84,7 +84,7 @@ export default class Serial {
     public readUntil(
         buffer : Uint8Array,
         pattern : string,
-        options : ReadOptions
+        options? : ReadOptions
     ) : Promise<number> {
         return new Promise(() => {});
     }
@@ -101,7 +101,7 @@ export default class Serial {
      */
     public write(
         buffer : Uint8Array,
-        options : WriteOptions
+        options? : WriteOptions
     ) : Promise<number> {
         return new Promise(() => {});
     }
