@@ -1,4 +1,5 @@
-import { Baudrate } from "./constant/baudrates.ts";
+import { Baudrate } from "./type/baudrate.d.ts";
+import { Parity } from "./type/parity.d.ts";
 import { Port } from "./interface/port.d.ts";
 import { ReadOptions } from "./interface/read_options.d.ts";
 import { WriteOptions } from "./interface/write_options.d.ts";
@@ -194,8 +195,8 @@ export default class Serial {
      * @type parity
      * @returns The parity of the serial object
      */
-    public get parity() : number {
-        return 0;
+    public get parity() : Parity {
+        return "NONE";
     }
     
     /**

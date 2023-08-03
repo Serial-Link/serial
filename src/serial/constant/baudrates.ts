@@ -1,5 +1,8 @@
-import { TypeFromArray } from "../type/type_from_array.d.ts"
-
+/**
+ * Default baudrates.
+ * 
+ * @constant
+ */
 export const baudrates = [
     300,
     600,
@@ -16,5 +19,3 @@ export const baudrates = [
     128000,
     256000
 ] as const
-
-export type Baudrate = TypeFromArray<typeof baudrates>
