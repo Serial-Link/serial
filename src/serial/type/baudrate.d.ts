@@ -6,4 +6,6 @@ import { TypeFromArray } from "./conversion/type_from_array.d.ts";
  * 
  * @type Baudrate
  */
+// (number & {}) converts number to generic object, needed for autocompletion
+// deno-lint-ignore ban-types
 export type Baudrate = TypeFromArray<typeof baudrates> | (number & {})
