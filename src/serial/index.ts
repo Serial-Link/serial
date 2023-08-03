@@ -22,11 +22,11 @@ export default class Serial {
     }
 
     /**
-     * Returns a list of port objects. It resolves to a list of port objects and rejects if any error encountered.
+     * Returns a list of device objects. It resolves to a list of device objects and rejects if any error encountered.
      * 
      * @public
      * @static
-     * @returns Resolves to a list of port objects, rejects if any error encountered
+     * @returns Resolves to a list of device objects, rejects if any error encountered
      */
     public static listDevices() : Promise<Device[]> {
         return new Promise(() => {});
