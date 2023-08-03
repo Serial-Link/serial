@@ -3,6 +3,7 @@ import { Parity } from "./type/parity.d.ts";
 import { Port } from "./interface/port.d.ts";
 import { ReadOptions } from "./interface/read_options.d.ts";
 import { WriteOptions } from "./interface/write_options.d.ts";
+import { DataBits } from "./type/data_bits.d.ts";
 
 /**
  * The Serial class with all its functionality.
@@ -196,7 +197,7 @@ export default class Serial {
      * @returns The parity of the serial object
      */
     public get parity() : Parity {
-        return "NONE";
+        return 'NONE';
     }
     
     /**
@@ -206,8 +207,8 @@ export default class Serial {
      * @type dataBits
      * @returns The data bits of the serial object
      */
-    public get dataBits() : number {
-        return 0;
+    public get dataBits() : DataBits {
+        return 'EIGHT';
     }
 
     /**
