@@ -1,11 +1,11 @@
-import { Device } from './interface/device.d.ts';
-import { Port } from './interface/port.d.ts';
-import { ReadOptions } from './interface/read_options.d.ts';
-import { WriteOptions } from './interface/write_options.d.ts';
-import { Baudrate } from './type/baudrate.d.ts';
-import { DataBits } from './type/data_bits.d.ts';
-import { Parity } from './type/parity.d.ts';
-import { StopBits } from './type/stop_bits.d.ts';
+import { Device } from './interface/device.d.ts'
+import { Port } from './interface/port.d.ts'
+import { ReadOptions } from './interface/read_options.d.ts'
+import { WriteOptions } from './interface/write_options.d.ts'
+import { Baudrate } from './type/baudrate.d.ts'
+import { DataBits } from './type/data_bits.d.ts'
+import { Parity } from './type/parity.d.ts'
+import { StopBits } from './type/stop_bits.d.ts'
 
 /**
  * The Serial class with all its functionality.
