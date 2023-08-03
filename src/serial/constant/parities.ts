@@ -1,5 +1,5 @@
 /**
- * Parity object with all available parities.
+ * Available parities.
  * 
  * @constant
  */
