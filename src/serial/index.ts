@@ -8,7 +8,7 @@ export default class Serial {
     }
 
     /**
-     * Returns a list of port objects.
+     * Returns a list of port info objects.
      * 
      * @public
      * @static
