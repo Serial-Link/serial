@@ -9,6 +9,8 @@ import { WriteOptions } from './interface/write_options.d.ts';
  * @class
  */
 export default class Serial {
+    private _port : Port;
+
     /**
      * Create a new instance of a serial connection to a serial device.
      * 
@@ -18,7 +20,7 @@ export default class Serial {
     constructor(
         port : Port
     ) {
-
+        this._port = port
     }
 
     /**
@@ -170,9 +172,6 @@ export default class Serial {
      * @returns The port object of the serial instance
      */
     public get port() : Port {
-        return {
-            path: '',
-            baudrate: 0
-        };
+        return this._port;
     }
 }
