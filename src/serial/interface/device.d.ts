@@ -5,14 +5,14 @@
  */
 export interface Device {
     /**
-     * Full name of the port (E.g. `ttyACM2`, `COM5`, ...)
+     * The name of the port (E.g. `ttyACM2`, `COM5`, ...)
      * 
      * @property
      */
     port : string,
 
     /**
-     * The path to the port. (E.g. `/dev/ttyACM2`, `COM5`, ...)
+     * The full path to the port. (E.g. `/dev/ttyACM2`, `COM5`, ...)
      * 
      * @property
      */
