@@ -107,7 +107,7 @@ export default class Serial {
         buffer : Uint8Array,
         options : WriteOptions
     ) : Promise<number> {
-        return new Promise(() => 0);
+        return new Promise(() => {});
     }
 
     /**
