@@ -151,7 +151,7 @@ export default class Serial {
      * 
      * @public
      * @type port
-     * @returns The port object of the serial object.
+     * @returns The port object of the serial object
      */
     public get port() : Port {
         return {
@@ -162,32 +162,44 @@ export default class Serial {
     }
 
     /**
+     * Getter for getting the baudrate of the serial object.
+     * 
      * @public
      * @type baudrate
+     * @returns The baudrate of the serial object
      */
     public get baudrate() : number {
         return 0;
     }
     
     /**
+     * Getter for getting the parity of the serial object.
+     * 
      * @public
      * @type parity
+     * @returns The parity of the serial object
      */
     public get parity() : number {
         return 0;
     }
     
     /**
+     * Getter for getting the data bits of the serial object.
+     * 
      * @public
      * @type dataBits
+     * @returns The data bits of the serial object
      */
     public get dataBits() : number {
         return 0;
     }
 
     /**
+     * Getter for getting the stop bits of the serial object.
+     * 
      * @public
      * @type stopBits
+     * @returns The stop bits of the serial object
      */
     public get stopBits() : number {
         return 0;
