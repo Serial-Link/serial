@@ -1,5 +1,6 @@
-import { ReadOptions } from "./read_options.d.ts";
-import { WriteOptions } from "./write_options.d.ts";
+import { Port } from "./interface/port.d.ts";
+import { ReadOptions } from "./interface/read_options.d.ts";
+import { WriteOptions } from "./interface/write_options.d.ts";
 
 export default class Serial {
     constructor() {
@@ -106,42 +107,58 @@ export default class Serial {
      * It resolves as soon as the output buffer is successfully cleared and rejects if any error encountered.
      * 
      * @public
-     * @returns Resolves after successful clear/Rejects if any error encountered
+     * @returns Resolves after successful clear, rejects if any error encountered
      */
     public clearBufferOut() : Promise<void> {
         return new Promise(() => {});
     }
 
     /**
+     * Getter for getting the current open state.
+     * 
      * @public
      * @type isOpen
+     * @returns `true` if the port is open, `false` otherwise
      */
     public get isOpen() : boolean {
         return false;
     }
 
     /**
+     * Getter for getting the current size of the local input buffer.
+     * 
      * @public
      * @type sizeBufferIn
+     * @returns The current size of the local input buffer
      */
     public get sizeBufferIn() : number {
         return 0;
     }
     
     /**
+     * Getter for getting the current size of the local output buffer.
+     * 
      * @public
      * @type sizeBufferOut
+     * @returns The current size of the local output buffer
      */
     public get sizeBufferOut() : number {
         return 0;
     }
 
     /**
+     * Getter for getting the port object of the serial object.
+     * 
      * @public
      * @type port
+     * @returns The port object of the serial object.
      */
-    public get port() : string {
-        return '';
+    public get port() : Port {
+        return {
+            name: '',
+            prefix: '',
+            index: 0
+        };
     }
 
     /**
