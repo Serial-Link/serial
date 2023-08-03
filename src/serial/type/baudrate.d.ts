@@ -6,5 +6,4 @@ import { TypeFromArray } from "./conversion/type_from_array.d.ts";
  * 
  * @type Baudrate
  */
-export type Baudrate = TypeFromArray<typeof baudrates>
-
+export type Baudrate = TypeFromArray<typeof baudrates> | (number & {})
