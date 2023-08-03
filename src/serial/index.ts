@@ -2,10 +2,6 @@ import { Device } from './interface/device.d.ts'
 import { Port } from './interface/port.d.ts'
 import { ReadOptions } from './interface/read_options.d.ts'
 import { WriteOptions } from './interface/write_options.d.ts'
-import { Baudrate } from './type/baudrate.d.ts'
-import { DataBits } from './type/data_bits.d.ts'
-import { Parity } from './type/parity.d.ts'
-import { StopBits } from './type/stop_bits.d.ts'
 
 /**
  * The Serial class with all its functionality.
@@ -167,58 +163,16 @@ export default class Serial {
     }
 
     /**
-     * Getter for getting the port object of the serial object. It resolves to the port object of the serial object
-     * and rejects if any error encountered.
+     * Getter for getting the port object of the serial instance.
      * 
      * @public
      * @type port
-     * @returns Resolves to the port object of the serial object, rejects if any error encountered
+     * @returns The port object of the serial instance
      */
-    public get port() : Promise<Device> {
-        return new Promise(() => {});
-    }
-
-    /**
-     * Getter for getting the baudrate of the serial object.
-     * 
-     * @public
-     * @type baudrate
-     * @returns The baudrate of the serial object
-     */
-    public get baudrate() : Baudrate {
-        return 9600;
-    }
-    
-    /**
-     * Getter for getting the parity of the serial object.
-     * 
-     * @public
-     * @type parity
-     * @returns The parity of the serial object
-     */
-    public get parity() : Parity {
-        return 'NONE';
-    }
-    
-    /**
-     * Getter for getting the data bits of the serial object.
-     * 
-     * @public
-     * @type dataBits
-     * @returns The data bits of the serial object
-     */
-    public get dataBits() : DataBits {
-        return 'EIGHT';
-    }
-
-    /**
-     * Getter for getting the stop bits of the serial object.
-     * 
-     * @public
-     * @type stopBits
-     * @returns The stop bits of the serial object
-     */
-    public get stopBits() : StopBits {
-        return "ONE";
+    public get port() : Port {
+        return {
+            path: '',
+            baudrate: 0
+        };
     }
 }
