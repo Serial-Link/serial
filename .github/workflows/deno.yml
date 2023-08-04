@@ -18,7 +18,7 @@ jobs:
       deno-version: v1.x
 
     steps:
-      - name: Get current date
+      - name:
         id: date
         run: echo "DATE=$(date +'%Y.%m.%d@%H-%M-%S')" >> $GITHUB_ENV
       
@@ -43,6 +43,6 @@ jobs:
         uses: dorny/test-reporter@v1
         if: success() || failure() 
         with:
-          name: Deno jUnit Test Report
+          name: Deno Test Report
           path: ./reports/${{env.DATE}}-report.xml
           reporter: jest-junit
