@@ -28,12 +28,9 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: ${{env.deno-version}}
-
-      - name: Run linter
-        run: deno lint
       
       - name: Run tests
-        run: deno test -A --unstable --check --reload --doc --allow-none --junit-path="./reports/${{env.DATE}}-report.xml"
+        run: deno test -A --unstable --check --lint --reload --doc --allow-none --junit-path="./reports/${{env.DATE}}-report.xml"
       
       - name: Report tests (${{env.DATE}}-report.xml)
         uses: dorny/test-reporter@v1
