@@ -18,7 +18,7 @@ jobs:
       deno-version: v1.x
 
     steps:
-      - name:
+      - name: Get current date
         id: date
         run: echo "DATE=$(date +'%Y.%m.%d@%H-%M-%S')" >> $GITHUB_ENV
       
