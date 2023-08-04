@@ -35,7 +35,7 @@ jobs:
       - name: Run tests
         run: deno test -A --unstable --check --reload --doc --allow-none --junit-path="./reports/${{env.DATE}}-report.xml"
       
-      - name: Report tests
+      - name: Report tests (${{env.DATE}}-report.xml)
         uses: dorny/test-reporter@v1
         if: success() || failure() 
         with:
