@@ -17,6 +17,10 @@ jobs:
       deno-version: v1.x
 
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=today::$(date +'%Y-%m-%d@%H-%M-%S')"
+      
       - name: Setup Repository (${{github.event.repository.name}})
         uses: actions/checkout@v3
 
@@ -27,9 +31,9 @@ jobs:
 
       - name: Run linter
         run: deno lint
-
+      
       - name: Run tests
-        run: deno test -A --unstable --check --reload --doc --allow-none
+        run: deno test -A --unstable --check --reload --doc --allow-none --junit-path="./reports/${{steps.date.outputs.date}}-report.xml"
       
       - name: Report tests
         uses: dorny/test-reporter@v1
