@@ -40,5 +40,5 @@ jobs:
         if: success() || failure() 
         with:
           name: JEST Tests
-          path: reports/${{env.DATE}}-report.xml
+          path: ./reports/${{env.DATE}}-report.xml
           reporter: jest-junit
