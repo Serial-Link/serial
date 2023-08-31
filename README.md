@@ -1,6 +1,6 @@
 # Serial-Link
 
-<a href="https://deno.land"><img align="right" src="https://deno.land/logo.svg" height="150px" alt="the deno mascot dinosaur standing in the rain"></a>
+<a href="https://deno.land"><img align="right" src="https://github.com/Serial-Link/.github/blob/main/assets/profile.svg" height="150px" alt="the serial port standing in the rain"></a>
 
 [![Deno Test](https://github.com/Serial-Link/Serial-Link/actions/workflows/deno.yml/badge.svg)](https://github.com/Serial-Link/Serial-Link/actions/workflows/deno.yml)
 
