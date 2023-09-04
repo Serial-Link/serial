@@ -3,7 +3,7 @@ name: Deno
 on:
   push:
     branches: ["main"]
-    paths: 'src/**'
+    paths: 'src/**/**'
   pull_request:
     branches: ["main"]
 
