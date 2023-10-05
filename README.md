@@ -2,7 +2,8 @@
 
 <a href="https://deno.land"><img align="right" src="https://github.com/Serial-Link/.github/blob/main/assets/profile.svg" height="150px" alt="the serial port standing in the rain"></a>
 
-[![Deno Test](https://github.com/Serial-Link/Serial-Link/actions/workflows/deno.yml/badge.svg)](https://github.com/Serial-Link/Serial-Link/actions/workflows/deno.yml)
+[![Unit Test](https://github.com/Serial-Link/Serial-Link/actions/workflows/test.yml/badge.svg)](https://github.com/Serial-Link/Serial-Link/actions/workflows/test.yml)
+[![Linter](https://github.com/Serial-Link/Serial-Link/actions/workflows/lint.yml/badge.svg)](https://github.com/Serial-Link/Serial-Link/actions/workflows/lint.yml)
 
 A [serial](https://en.wikipedia.org/wiki/Serial_communication) library written in TypeScript for [Deno](https://deno.land) without any third party modules.
 
