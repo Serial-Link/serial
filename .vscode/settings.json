@@ -2,7 +2,8 @@
     "deno.enable": true,
     "deno.unstable": true,
     "deno.enablePaths": [
+        "mod.ts",
         "./src",
-        "./test"
+        "./test",
     ]
 }
