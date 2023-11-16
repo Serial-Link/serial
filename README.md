@@ -23,6 +23,7 @@ This library provides an interface for the communication with serial devices and
 |---------|-------------------------|---------------|
 | Windows | Windows 10 (x64)        | in progress   |
 | Linux   | Ubuntu Server 22.04 LTS | in progress   |
+| Mac     | -                       | planned       |
 
 ## Documentation
 - Check out the [Wiki](https://github.com/Serial-Link/Serial-Link/wiki) section on how to use this library.
