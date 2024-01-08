@@ -1,4 +1,4 @@
-import { TypeFromObject } from './conversion/type_from_object.d.ts';
+import { TypeFromObject } from './conversion/type_from_object.ts';
 import { stopBits } from '../constant/stop_bits.ts';
 
 /**

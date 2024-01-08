@@ -1,7 +1,7 @@
-import { Baudrate } from '../type/baudrate.d.ts'
-import { DataBits } from '../type/data_bits.d.ts'
-import { Parity } from '../type/parity.d.ts'
-import { StopBits } from '../type/stop_bits.d.ts'
+import { Baudrate } from '../type/baudrate.ts'
+import { DataBits } from '../type/data_bits.ts'
+import { Parity } from '../type/parity.ts'
+import { StopBits } from '../type/stop_bits.ts'
 
 export interface Port {
     /**

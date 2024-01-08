@@ -1,4 +1,4 @@
-import { TypeFromArray } from './conversion/type_from_array.d.ts';
+import { TypeFromArray } from './conversion/type_from_array.ts';
 import { baudrates } from '../constant/baudrates.ts';
 
 /**

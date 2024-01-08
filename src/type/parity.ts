@@ -1,4 +1,4 @@
-import { TypeFromObject } from './conversion/type_from_object.d.ts';
+import { TypeFromObject } from './conversion/type_from_object.ts';
 import { parities } from '../constant/parities.ts';
 
 /**

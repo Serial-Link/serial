@@ -1,7 +1,7 @@
-import { Device } from './interface/device.d.ts';
-import { Port } from './interface/port.d.ts';
-import { ReadOptions } from './interface/read_options.d.ts';
-import { WriteOptions } from './interface/write_options.d.ts';
+import { Device } from './interface/device.ts';
+import { Port } from './interface/port.ts';
+import { ReadOptions } from './interface/read_options.ts';
+import { WriteOptions } from './interface/write_options.ts';
 
 /**
  * The Serial class with all its functionality.
