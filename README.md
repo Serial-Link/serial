@@ -12,7 +12,7 @@ This library provides an interface for the communication with serial devices and
 ## Features
 - Communication with serial devices.
 - Create multiple serial connections at the same time.
-- List available ports and their properties.
+- List available ports and their properties (if available).
 - Set timeouts for both reading and writing.
 - All functions are async.
 - Uses no third party modules.
