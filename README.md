@@ -1,4 +1,4 @@
-# Serial-Link
+# Serial
 
 <a href="https://deno.land"><img align="right" src="https://github.com/Serial-Link/.github/blob/main/assets/profile.svg" height="150px" alt="the serial port standing in the rain"></a>
 
