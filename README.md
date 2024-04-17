@@ -26,7 +26,7 @@ This library provides an interface for the communication with serial devices and
 | Mac     | -                       | planned       |
 
 ## Documentation
-- Check out the [Wiki](https://github.com/Serial-Link/Serial-Link/wiki) section on how to use this library.
+- Check out the [Wiki](https://github.com/Serial-Link/Serial/wiki) section on how to use this library.
 - Check out [denonomicon.deno.dev](https://denonomicon.deno.dev/) and [deno.land/manual@v1.36.4/runtime/ffi_api](https://deno.land/manual@v1.36.4/runtime/ffi_api) about Deno + FFI.
 
 ## Credits
